@@ -21,9 +21,9 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 glass-nav transition-all duration-500" id="main-nav" aria-label="Main navigation">
       <div className="flex items-center justify-between px-edge-margin-desktop h-20 max-w-container-max mx-auto">
         <div className="flex items-center gap-12">
-          <Link to="/" className="flex items-center gap-3 font-display-lg text-headline-md font-extrabold tracking-tighter text-primary-container dark:text-primary-container" aria-label="CINEVOID Home">
-            <img src="/logo.png" alt="CINEVOID Logo" className="w-8 h-8 rounded" />
-            CINEVOID
+          <Link to="/" className="flex items-center gap-3 font-display-lg text-headline-md font-extrabold tracking-tighter text-primary-container dark:text-primary-container" aria-label="CINEVIDEO Home">
+            <img src="/logo.png" alt="CINEVIDEO Logo" className="w-8 h-8 rounded" />
+            CINEVIDEO
           </Link>
           <div className="hidden md:flex items-center gap-8" role="menubar">
             <Link to="/" className="text-primary-container font-bold border-b-2 border-primary-container pb-1 font-label-lg text-label-lg hover:text-primary transition-colors duration-300" role="menuitem">

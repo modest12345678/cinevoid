@@ -46,7 +46,7 @@ export default function Search() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = q ? `Search: ${q} | CINEVOID` : 'Search | CINEVOID';
+    document.title = q ? `Search: ${q} | CINEVIDEO` : 'Search | CINEVIDEO';
   }, [q]);
 
   useEffect(() => {

@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="w-full mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest flex flex-col items-center gap-gutter py-row-gap px-edge-margin-desktop border-t border-outline-variant" aria-label="Site footer">
       <div className="max-w-container-max w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div className="space-y-4 max-w-xs">
-          <Link to="/" className="font-display-lg text-headline-sm font-bold text-primary-container" aria-label="CINEVOID Home">
-            CINEVOID
+          <Link to="/" className="font-display-lg text-headline-sm font-bold text-primary-container" aria-label="CINEVIDEO Home">
+            CINEVIDEO
           </Link>
           <p className="font-body-md text-body-md text-on-surface-variant">
             Your free streaming destination for trending movies, top-rated anime, and Studio Ghibli classics. No sign-up. No subscription. Just cinema.
@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
       <div className="max-w-container-max w-full pt-8 border-t border-outline-variant/30 text-center">
         <p className="font-label-sm text-label-sm text-on-surface-variant opacity-60">
-          © {new Date().getFullYear()} CINEVOID. All rights reserved. &nbsp;|&nbsp; DMCA Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.
+          © {new Date().getFullYear()} CINEVIDEO. All rights reserved. &nbsp;|&nbsp; DMCA Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.
         </p>
       </div>
     </footer>

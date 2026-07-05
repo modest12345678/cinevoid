@@ -156,7 +156,7 @@ export default function WatchPage() {
               <ShoppingCart className="text-primary w-6 h-6" />
             </div>
             <div>
-              <p className="font-bold text-on-surface">Upgrade to CINEVOID Pro</p>
+              <p className="font-bold text-on-surface">Upgrade to CINEVIDEO Pro</p>
               <p className="text-sm opacity-70">Watch without interruptions. Try 7 days free.</p>
             </div>
           </div>
@@ -219,7 +219,7 @@ export default function WatchPage() {
               <Shield className="w-10 h-10" />
             </div>
             <p className="font-bold text-sm text-on-surface mb-1">Stay Anonymous</p>
-            <p className="text-xs text-on-surface-variant mb-4">Protect your streaming with CINEVOID VPN.</p>
+            <p className="text-xs text-on-surface-variant mb-4">Protect your streaming with CINEVIDEO VPN.</p>
             <button className="w-full py-2 bg-secondary text-on-secondary font-bold text-xs rounded uppercase tracking-wider hover:opacity-90 transition-opacity">Get 80% Off</button>
           </div>
         </div>

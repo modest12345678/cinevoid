@@ -4,11 +4,11 @@ export default function DMCA() {
       <h1 className="text-4xl font-extrabold text-primary-container mb-6">DMCA Policy</h1>
       <p className="text-on-surface-variant mb-4">Last updated: July 2026</p>
       <section className="space-y-6 text-on-surface-variant leading-relaxed">
-        <p>CINEVOID respects the intellectual property rights of others and expects its users to do the same. This page outlines our policy regarding copyright infringement under the Digital Millennium Copyright Act (DMCA).</p>
+        <p>CINEVIDEO respects the intellectual property rights of others and expects its users to do the same. This page outlines our policy regarding copyright infringement under the Digital Millennium Copyright Act (DMCA).</p>
         <h2 className="text-xl font-bold text-on-surface">No Hosted Content</h2>
-        <p>CINEVOID does not host, store, or transmit any video files or copyrighted media. All content displayed on this site is sourced from publicly available third-party APIs (such as TMDb, Jikan, and Watchmode). We are a discovery and aggregation platform only.</p>
+        <p>CINEVIDEO does not host, store, or transmit any video files or copyrighted media. All content displayed on this site is sourced from publicly available third-party APIs (such as TMDb, Jikan, and Watchmode). We are a discovery and aggregation platform only.</p>
         <h2 className="text-xl font-bold text-on-surface">Reporting a Claim</h2>
-        <p>If you believe your copyrighted work has been improperly represented on this site, please send a written DMCA notice to <strong className="text-on-surface">dmca@cinevoid.com</strong> including:</p>
+        <p>If you believe your copyrighted work has been improperly represented on this site, please send a written DMCA notice to <strong className="text-on-surface">dmca@CINEVIDEO.com</strong> including:</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Your contact information (name, address, email, phone).</li>
           <li>A description of the copyrighted work you claim has been infringed.</li>
