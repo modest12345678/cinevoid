@@ -63,13 +63,13 @@ export default function Movies() {
     <div className="bg-background text-on-background">
       <SEO 
         title="Free Movies to Watch Online | CINEVIDEO"
-        canonicalUrl="https://cinevoid.pages.dev/movies"
+        canonicalUrl="https://cinevideo.xyz/movies"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cinevoid.pages.dev/" },
-            { "@type": "ListItem", "position": 2, "name": "Movies", "item": "https://cinevoid.pages.dev/movies" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cinevideo.xyz/" },
+            { "@type": "ListItem", "position": 2, "name": "Movies", "item": "https://cinevideo.xyz/movies" }
           ]
         }}
       />

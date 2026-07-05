@@ -28,7 +28,7 @@ export default function Trending() {
     <div className="bg-background text-on-background min-h-screen">
       <SEO 
         title="Trending Movies and Shows | CINEVIDEO" 
-        canonicalUrl="https://cinevoid.pages.dev/trending" 
+        canonicalUrl="https://cinevideo.xyz/trending" 
       />
       <main className="pt-28 pb-16 px-4 sm:px-8 lg:px-16 max-w-container-max mx-auto">
         <section className="mb-12">

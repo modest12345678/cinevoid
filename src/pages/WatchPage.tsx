@@ -142,7 +142,7 @@ export default function WatchPage() {
       <SEO 
         title={`${title} - Watch Free Online | CINEVIDEO`}
         description={synopsis}
-        canonicalUrl={`https://cinevoid.pages.dev/watch/${type}/${id}`}
+        canonicalUrl={`https://cinevideo.xyz/watch/${type}/${id}`}
       />
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 mb-8 text-on-surface-variant font-label-lg text-label-lg">

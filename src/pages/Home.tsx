@@ -63,18 +63,18 @@ export default function Home() {
     <div className="bg-background text-on-background">
       <SEO 
         title="CINEVIDEO — Watch Trending Movies & Anime Free"
-        canonicalUrl="https://cinevoid.pages.dev/"
+        canonicalUrl="https://cinevideo.xyz/"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "CINEVIDEO",
-          "url": "https://cinevoid.pages.dev",
+          "url": "https://cinevideo.xyz",
           "description": "Free online movie and anime streaming platform with thousands of titles in HD.",
           "potentialAction": {
             "@type": "SearchAction",
             "target": {
               "@type": "EntryPoint",
-              "urlTemplate": "https://cinevoid.pages.dev/search?q={search_term_string}"
+              "urlTemplate": "https://cinevideo.xyz/search?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
           }

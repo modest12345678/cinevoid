@@ -37,13 +37,13 @@ export default function Anime() {
     <div className="bg-background text-on-background">
       <SEO 
         title="Watch Top Anime & Studio Ghibli Classics Free | CINEVIDEO"
-        canonicalUrl="https://cinevoid.pages.dev/anime"
+        canonicalUrl="https://cinevideo.xyz/anime"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cinevoid.pages.dev/" },
-            { "@type": "ListItem", "position": 2, "name": "Anime", "item": "https://cinevoid.pages.dev/anime" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cinevideo.xyz/" },
+            { "@type": "ListItem", "position": 2, "name": "Anime", "item": "https://cinevideo.xyz/anime" }
           ]
         }}
       />
