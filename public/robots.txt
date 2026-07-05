@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cinevideo.xyz/sitemap.xml
+Sitemap: https://cinevoid.pages.dev/sitemap.xml

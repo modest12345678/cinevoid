@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Search as SearchIcon } from 'lucide-react';
 import MovieCard from '../components/MovieCard';
+import SEO from '../components/SEO';
 
 const TMDB_API_KEY = '1d9b898a212ea52e283351e521e17871';
 const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p/w500';
@@ -38,7 +40,7 @@ interface TMDbMovie {
 }
 
 export default function Search() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const q = searchParams.get('q') ?? '';
 
   const [results, setResults] = useState<TMDbMovie[]>([]);
@@ -94,6 +96,31 @@ export default function Search() {
 
   return (
     <main className="min-h-screen bg-background pt-28 pb-16 px-4 sm:px-8 lg:px-16">
+      <SEO 
+        title={q ? `Search: ${q} | CINEVIDEO` : 'Search | CINEVIDEO'} 
+        noindex={true} 
+      />
+      {/* Mobile Search Input */}
+      <div className="mb-8 lg:hidden">
+        <div className="relative w-full">
+          <input
+            type="search"
+            placeholder="Search movies, anime..."
+            value={q}
+            onChange={(e) => {
+              if (e.target.value) {
+                setSearchParams({ q: e.target.value });
+              } else {
+                setSearchParams({});
+              }
+            }}
+            className="w-full bg-surface-container-low border border-outline-variant rounded-full py-3 pl-12 pr-6 text-on-surface focus:ring-1 focus:ring-primary-container text-body-lg transition-all"
+            autoFocus
+          />
+          <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant w-5 h-5" />
+        </div>
+      </div>
+
       {/* Hero heading */}
       <div className="mb-10">
         <h1 className="text-3xl sm:text-4xl font-bold text-on-surface">

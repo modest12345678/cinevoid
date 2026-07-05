@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-nav transition-all duration-500" id="main-nav" aria-label="Main navigation">
-      <div className="flex items-center justify-between px-edge-margin-desktop h-20 max-w-container-max mx-auto">
+      <div className="flex items-center justify-between px-edge-margin-mobile md:px-edge-margin-desktop h-20 max-w-container-max mx-auto">
         <div className="flex items-center gap-12">
           <Link to="/" className="flex items-center gap-3 font-display-lg text-headline-md font-extrabold tracking-tighter text-primary-container dark:text-primary-container" aria-label="CINEVIDEO Home">
             <img src="/logo.png" alt="CINEVIDEO Logo" className="w-8 h-8 rounded" />

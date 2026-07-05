@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Movies from './pages/Movies';
 import Anime from './pages/Anime';
+import Trending from './pages/Trending';
 import WatchPage from './pages/WatchPage';
 import Search from './pages/Search';
 import Privacy from './pages/Privacy';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/anime" element={<Anime />} />
+            <Route path="/trending" element={<Trending />} />
             <Route path="/search" element={<Search />} />
             <Route path="/watch/:type/:id" element={<WatchPage />} />
             <Route path="/privacy" element={<Privacy />} />

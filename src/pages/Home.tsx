@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Play, Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 import MovieCard from '../components/MovieCard';
+import SEO from '../components/SEO';
 import { useState, useEffect } from 'react';
 
 const TMDB_API_KEY = '1d9b898a212ea52e283351e521e17871';
@@ -60,6 +61,25 @@ export default function Home() {
 
   return (
     <div className="bg-background text-on-background">
+      <SEO 
+        title="CINEVIDEO — Watch Trending Movies & Anime Free"
+        canonicalUrl="https://cinevoid.pages.dev/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "CINEVIDEO",
+          "url": "https://cinevoid.pages.dev",
+          "description": "Free online movie and anime streaming platform with thousands of titles in HD.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://cinevoid.pages.dev/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }}
+      />
       {/* Hero Spotlight Banner */}
       <section className="relative w-full h-[921px] md:h-screen overflow-hidden">
         <div 
@@ -67,7 +87,7 @@ export default function Home() {
           style={{ backgroundImage: `url('${getImageUrl(hero.backdrop_path, 'original')}')` }}
         ></div>
         <div className="absolute inset-0 hero-gradient"></div>
-        <div className="relative h-full flex flex-col justify-end pb-24 px-edge-margin-desktop max-w-container-max mx-auto">
+        <div className="relative h-full flex flex-col justify-end pb-24 px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto">
           <div className="max-w-2xl animate-fade-in">
             <span className="inline-block px-3 py-1 mb-4 bg-primary-container/20 text-primary border border-primary-container/30 font-label-lg text-label-lg rounded-sm uppercase tracking-widest">
               Trending Now
@@ -96,8 +116,8 @@ export default function Home() {
       <main className="space-y-section-gap -mt-20 relative z-10">
         
         {/* Row 1: New on Streaming (Watchmode) */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               New on Streaming
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -106,7 +126,7 @@ export default function Home() {
               Powered by Watchmode
             </span>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {streaming.map(movie => (
               <MovieCard 
                 key={movie.id}
@@ -125,8 +145,8 @@ export default function Home() {
         </section>
 
         {/* Row 2: Trending Now */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Trending Now
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -135,7 +155,7 @@ export default function Home() {
               View All
             </Link>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {trending.map(movie => (
               <MovieCard 
                 key={movie.id}
@@ -153,8 +173,8 @@ export default function Home() {
         </section>
 
         {/* Row 2: Latest Hollywood Releases (16:9 Aspect) */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Epic Features
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -168,7 +188,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {latest.map(movie => (
               <MovieCard 
                 key={movie.id}
@@ -188,8 +208,8 @@ export default function Home() {
         </section>
 
         {/* Row 3: Action / Sci-Fi / Top Rated */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Top Rated Classics
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -198,7 +218,7 @@ export default function Home() {
               Browse Genre
             </Link>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {classics.map(movie => (
               <MovieCard 
                 key={movie.id}

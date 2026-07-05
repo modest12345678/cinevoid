@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Play, Plus, ChevronLeft, ChevronRight } from 'lucide-react';
 import MovieCard from '../components/MovieCard';
+import SEO from '../components/SEO';
 import { useState, useEffect } from 'react';
 
 export default function Anime() {
@@ -34,6 +35,18 @@ export default function Anime() {
 
   return (
     <div className="bg-background text-on-background">
+      <SEO 
+        title="Watch Top Anime & Studio Ghibli Classics Free | CINEVIDEO"
+        canonicalUrl="https://cinevoid.pages.dev/anime"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cinevoid.pages.dev/" },
+            { "@type": "ListItem", "position": 2, "name": "Anime", "item": "https://cinevoid.pages.dev/anime" }
+          ]
+        }}
+      />
       {/* Hero Spotlight Banner */}
       <section className="relative w-full h-[921px] md:h-screen overflow-hidden">
         <div 
@@ -41,14 +54,14 @@ export default function Anime() {
           style={{ backgroundImage: `url('${hero.trailer?.images?.maximum_image_url || hero.images?.jpg?.large_image_url}')` }}
         ></div>
         <div className="absolute inset-0 hero-gradient"></div>
-        <div className="relative h-full flex flex-col justify-end pb-24 px-edge-margin-desktop max-w-container-max mx-auto">
+        <div className="relative h-full flex flex-col justify-end pb-24 px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto">
           <div className="max-w-2xl animate-fade-in">
             <span className="inline-block px-3 py-1 mb-4 bg-primary-container/20 text-primary border border-primary-container/30 font-label-lg text-label-lg rounded-sm uppercase tracking-widest">
               Trending Now
             </span>
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-4 text-on-primary-container">
+            <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight mb-4 text-on-primary-container">
               {hero.title_english || hero.title}
-            </h1>
+            </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant/90 mb-8 line-clamp-3">
               {hero.synopsis}
             </p>
@@ -67,11 +80,23 @@ export default function Anime() {
       </section>
 
       {/* Main Content Sliders */}
-      <main className="space-y-section-gap -mt-20 relative z-10">
+      <main className="relative z-10 bg-background">
         
+        {/* SEO Page Intro */}
+        <section className="px-edge-margin-mobile md:px-edge-margin-desktop pt-16 pb-8 max-w-container-max mx-auto">
+          <h1 className="font-display-sm text-headline-lg md:text-display-sm mb-4 text-on-surface">Watch Anime & Studio Ghibli Classics Free</h1>
+          <p className="text-on-surface-variant max-w-4xl text-body-lg">
+            Explore our vast library of top-rated anime, including trending series, beloved Studio Ghibli classics, 
+            and epic action adventures. Whether you're a lifelong otaku or just discovering anime, we have everything 
+            from shounen masterpieces to slice-of-life gems. Stream your favorite anime completely free, in high quality, 
+            with no sign-up or subscription required. 
+          </p>
+        </section>
+
+        <div className="space-y-section-gap pt-8">
         {/* Row 1: Trending Now */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Trending Now
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -80,7 +105,7 @@ export default function Anime() {
               View All
             </Link>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {trending.map(anime => (
               <MovieCard 
                 key={anime.mal_id}
@@ -98,8 +123,8 @@ export default function Anime() {
         </section>
 
         {/* Row 2: Latest Hollywood Releases (16:9 Aspect) */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Latest Releases
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -113,7 +138,7 @@ export default function Anime() {
               </button>
             </div>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {latest.map(anime => (
               <MovieCard 
                 key={anime.mal_id}
@@ -133,8 +158,8 @@ export default function Anime() {
         </section>
 
         {/* Row 3: Action / Sci-Fi */}
-        <section className="pl-edge-margin-desktop overflow-hidden">
-          <div className="flex items-center justify-between pr-edge-margin-desktop mb-6">
+        <section className="pl-edge-margin-mobile md:pl-edge-margin-desktop overflow-hidden">
+          <div className="flex items-center justify-between pr-edge-margin-mobile md:pr-edge-margin-desktop mb-6">
             <h2 className="font-headline-md text-headline-md text-on-surface flex items-center gap-3">
               Action / Sci-Fi
               <span className="w-12 h-[2px] bg-primary-container"></span>
@@ -143,7 +168,7 @@ export default function Anime() {
               Browse Genre
             </Link>
           </div>
-          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-desktop">
+          <div className="flex gap-gutter overflow-x-auto hide-scrollbar pb-8 pr-edge-margin-mobile md:pr-edge-margin-desktop">
             {action.map(anime => (
               <MovieCard 
                 key={anime.mal_id}
@@ -159,6 +184,7 @@ export default function Anime() {
             ))}
           </div>
         </section>
+        </div>
       </main>
     </div>
   );

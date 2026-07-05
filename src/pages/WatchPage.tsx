@@ -1,8 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
 import { 
-  ChevronRight, ShoppingCart, Play, Database, Zap, Shield
+  ChevronRight, Play, Database, Zap
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 
 const TMDB_API_KEY = '1d9b898a212ea52e283351e521e17871';
 
@@ -137,7 +138,12 @@ export default function WatchPage() {
   const typeUrl = isAnime ? '/anime' : '/movies';
 
   return (
-    <main className="pt-24 pb-section-gap max-w-container-max mx-auto px-edge-margin-desktop">
+    <main className="pt-24 pb-section-gap max-w-container-max mx-auto px-edge-margin-mobile md:px-edge-margin-desktop">
+      <SEO 
+        title={`${title} - Watch Free Online | CINEVIDEO`}
+        description={synopsis}
+        canonicalUrl={`https://cinevoid.pages.dev/watch/${type}/${id}`}
+      />
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 mb-8 text-on-surface-variant font-label-lg text-label-lg">
         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
@@ -147,22 +153,7 @@ export default function WatchPage() {
         <span className="text-on-surface capitalize truncate max-w-xs">{title} ({year})</span>
       </nav>
 
-      {/* Top Banner Ad (728x90) */}
-      <div className="w-full flex justify-center mb-8 relative">
-        <div className="w-full max-w-[728px] h-[90px] bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center text-on-surface-variant relative overflow-hidden group rounded">
-          <span className="font-label-sm text-label-sm opacity-50 absolute top-1 right-2 uppercase tracking-widest">Advertisement</span>
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-primary-container/20 rounded flex items-center justify-center">
-              <ShoppingCart className="text-primary w-6 h-6" />
-            </div>
-            <div>
-              <p className="font-bold text-on-surface">Upgrade to CINEVIDEO Pro</p>
-              <p className="text-sm opacity-70">Watch without interruptions. Try 7 days free.</p>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-primary-container/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </div>
-      </div>
+
 
       {/* Video Player Section */}
       <div className="grid grid-cols-12 gap-gutter">
@@ -212,16 +203,7 @@ export default function WatchPage() {
             </div>
           </div>
 
-          {/* Sidebar Ad (300x250) */}
-          <div className="w-full aspect-[6/5] bg-surface-container-low border border-outline-variant flex flex-col items-center justify-center p-4 text-center group relative overflow-hidden rounded-xl">
-            <span className="font-label-sm text-label-sm opacity-50 absolute top-1 right-2 uppercase tracking-widest">Ad</span>
-            <div className="p-3 bg-secondary/10 rounded-full mb-3 text-secondary">
-              <Shield className="w-10 h-10" />
-            </div>
-            <p className="font-bold text-sm text-on-surface mb-1">Stay Anonymous</p>
-            <p className="text-xs text-on-surface-variant mb-4">Protect your streaming with CINEVIDEO VPN.</p>
-            <button className="w-full py-2 bg-secondary text-on-secondary font-bold text-xs rounded uppercase tracking-wider hover:opacity-90 transition-opacity">Get 80% Off</button>
-          </div>
+
         </div>
       </div>
 

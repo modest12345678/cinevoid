@@ -1,6 +1,9 @@
+import SEO from '../components/SEO';
+
 export default function Terms() {
   return (
     <main className="pt-28 pb-20 max-w-3xl mx-auto px-6 text-on-surface">
+      <SEO title="Terms of Service | CINEVIDEO" canonicalUrl="https://cinevoid.pages.dev/terms" />
       <h1 className="text-4xl font-extrabold text-primary-container mb-6">Terms of Service</h1>
       <p className="text-on-surface-variant mb-4">Last updated: July 2026</p>
       <section className="space-y-6 text-on-surface-variant leading-relaxed">
